@@ -7,9 +7,7 @@ import classes from '../New Tasks/Newtasks.module.css';
 const Search = () => {
     const {search , setSearch, tasks,setChange ,setTasks} = useContext(dataStore);
     const [task , setTask] = useState('');
-    useEffect(()=>{
-      console.log(search);
-    },[]);
+   
     const findData = ()=>{
       const val = tasks.filter((item) => {
         return item.title.toLowerCase().includes(task.toLowerCase());
